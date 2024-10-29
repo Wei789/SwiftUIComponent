@@ -27,7 +27,7 @@ public struct LoadingScreen<CustomSpinner: View>: View {
         if isLoading {
             ZStack {
                 backgroundColor
-                    .edgesIgnoringSafeArea(.all) // Cover the entire screen
+                    .edgesIgnoringSafeArea(.all)
                 if let customSpinner = customSpinner {
                     customSpinner()
                         .frame(width: spinnerSize, height: spinnerSize)
@@ -38,8 +38,8 @@ public struct LoadingScreen<CustomSpinner: View>: View {
                         .scaleEffect(1.5)
                 }
             }
-            .transition(.opacity) // Add fade in/out transition
-            .animation(.easeInOut, value: isLoading) // Animate the visibility change
+            .transition(.opacity)
+            .animation(.easeInOut, value: isLoading)
         }
     }
 }

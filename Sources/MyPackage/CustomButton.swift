@@ -52,11 +52,10 @@ public struct CustomButton: View {
 }
 
 struct CustomButton_Previews: PreviewProvider {
-    @State static var isLoading = false
     static var previews: some View {
         VStack(spacing: 20) {
-            CustomButton(title: "Click Me", action: { isLoading.toggle() }, isLoading: $isLoading)
-            //            CustomButton(title: "Loading...", action: { }, isLoading: .constant(true), backgroundColor: .gray)
+            CustomButton(title: "Click Me", action: {}, isLoading: .constant(false))
+            CustomButton(title: "Loading...", action: { }, isLoading: .constant(true), backgroundColor: .gray)
         }
         .padding()
     }
